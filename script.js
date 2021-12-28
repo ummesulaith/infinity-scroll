@@ -2,7 +2,7 @@
 const apiKey = 'YUTNBi_M5WlckgYG-3houw8huA7tGIPWvwJ9dsjdAi4',
     imgContainer = document.getElementById('image-container'),
     loader = document.getElementById('loader');
-    let count = 5,
+let count = 5,
     apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 let ready = false,
     imagesLoaded = 0,
