@@ -14,9 +14,21 @@ function imageLoaded() {
     if (imagesLoaded === totalImages) {
         ready = true;
         loader.hidden = true;
-        initialLoad = false;
-        count = 30;
+        checkInternetConnectivity()
     }
+}
+
+function checkInternetConnectivity(){
+    setTimeout(function () {
+        if (initialLoad) {
+            initialLoad = false
+            count = 30;
+            console.log('initialLoad::', initialLoad ,'::count', count)
+        }else{
+            console.log('initalLoad::',initialLoad)
+            count = 5;
+        }
+    }, 750);
 }
 function setAttributes(element, attributes) {
     for (let key in attributes) {
